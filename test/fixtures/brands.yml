@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active: false
+  name: MyString
+  description: MyText
+  active: false
+  redemption: MyString
+  merchant: one
+
+two:
+  active: false
+  name: MyString
+  description: MyText
+  active: false
+  redemption: MyString
+  merchant: two

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active: false
+  name: MyString
+  client: one
+  uid: MyString
+  secret: MyString
+
+two:
+  active: false
+  name: MyString
+  client: two
+  uid: MyString
+  secret: MyString
