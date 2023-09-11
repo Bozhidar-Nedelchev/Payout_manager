@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Countries:</h1>
+
+<!--<div id="countries">-->
+<!--  <% @countries.each do |country| %>-->
+<!--    <%= render country %>-->
+<!--    <p>-->
+<!--      <%= link_to "Show this country", country %>-->
+<!--    </p>-->
+<!--  <% end %>-->
+<!--</div>-->
+
+<!--<%= link_to "New country", new_country_path %>-->
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Currency</th>
+      <!-- Add more table headers for other attributes -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= country.name %></td>
+        <td><%= country.currency %></td>
+        <!-- Add more table cells for other attributes -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

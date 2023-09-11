@@ -1,0 +1,18 @@
+<h1>List of Clients</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active</th>
+    <th>Country</th>
+    <th>Payout Rate (%)</th>
+  </tr>
+  <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.name %></td>
+      <td><%= client.active ? 'Yes' : 'No' %></td>
+      <td><%= client.country.name %></td>
+      <td><%= client.payout_rate %></td>
+    </tr>
+  <% end %>
+</table>

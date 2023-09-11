@@ -1,0 +1,39 @@
+<!--<p style="color: green"><%= notice %></p>-->
+
+<!--<h1>Aplications</h1>-->
+
+<!--<div id="aplications">-->
+<!--  <% @aplications.each do |aplication| %>-->
+<!--    <%= render aplication %>-->
+<!--    <p>-->
+<!--      <%= link_to "Show this aplication", aplication %>-->
+<!--    </p>-->
+<!--  <% end %>-->
+<!--</div>-->
+
+<!--<%= link_to "New aplication", new_aplication_path %>-->
+<h1>Applications</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Client</th>
+      <th>UID</th>
+      <th>Secret</th>
+      <!-- Add more table headers for other attributes -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @applications.each do |application| %>
+      <tr>
+        <td><%= application.name %></td>
+        <td><%= application.client.name %></td>
+        <td><%= application.uid %></td>
+        <td><%= application.secret %></td>
+        <!-- Display other attributes as needed -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Application", new_application_path %>

@@ -1,0 +1,22 @@
+<h1>List of Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client Amount</th>
+      <th>Merchant Amount</th>
+      <th>Reference Number</th>
+      <!-- Add more table headers for other attributes -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.client_amount %></td>
+        <td><%= transaction.merchant_amount %></td>
+        <td><%= transaction.reference_number %></td>
+        <!-- Add more table cells for other attributes -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

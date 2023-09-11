@@ -1,4 +1,4 @@
-class AplicationsController < ApplicationController
+class ApplicationsController < ApplicationController
     before_action :set_application, only: [:show, :edit, :update, :destroy]
 
   def index

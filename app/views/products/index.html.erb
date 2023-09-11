@@ -1,0 +1,39 @@
+<!--<p style="color: green"><%= notice %></p>-->
+
+<!--<h1>Products</h1>-->
+
+<!--<div id="products">-->
+<!--  <% @products.each do |product| %>-->
+<!--    <%= render product %>-->
+<!--    <p>-->
+<!--      <%= link_to "Show this product", product %>-->
+<!--    </p>-->
+<!--  <% end %>-->
+<!--</div>-->
+
+<!--<%= link_to "New product", new_product_path %>-->
+<h1>Products</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Brand</th>
+      <th>Active</th>
+      <!-- Add more table headers for other attributes -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= number_to_currency(product.amount) %></td>
+        <td><%= product.brand.name %></td>
+        <td><%= product.active ? 'Yes' : 'No' %></td>
+        <!-- Display other attributes as needed -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Product", new_product_path %>

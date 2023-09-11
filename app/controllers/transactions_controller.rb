@@ -3,6 +3,10 @@ class TransactionsController < ApplicationController
 
   def show
   end
+  
+  def index
+    @transactions = Transaction.all # Assuming you have a Transaction model
+  end
 
   private
 
