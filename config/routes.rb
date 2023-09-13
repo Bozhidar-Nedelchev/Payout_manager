@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resources :products
   resources :applications
   end
+  namespace :api do
+  get 'brands', to: 'brands#index'
+  get 'brands/:id', to: 'brands#show'
+  end
   resources :countries do 
     collection do
       get 'statistics' # Statistics action

@@ -15,6 +15,8 @@ gem 'pg'
 
 gem 'money-rails'
 
+gem 'ransack'
+
 # Gemfile
 gem 'bulma-rails', '~> 0.9.2'
 

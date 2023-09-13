@@ -3,8 +3,10 @@ before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
+  
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
-
   def show
     # The @product variable is already set in the before_action
   end
@@ -27,11 +29,19 @@ before_action :set_product, only: [:show, :edit, :update, :destroy]
   end
 
   def update
-    if @product.update(product_params)
-      redirect_to admin_product_path(@product), notice: 'Product was successfully updated.'
-    else
-      render :edit
-    end
+  @product = Product.find(params[:id])
+
+  # Create a copy of the permitted parameters
+  updated_params = product_params.dup
+
+  # Remove the attribute you want to exclude (e.g., :amount)
+  updated_params.delete(:amount)
+
+  if @product.update(updated_params)
+    redirect_to admin_product_path(@product), notice: 'Product was successfully updated.'
+  else
+    render :edit
+  end
   end
 
   def destroy
