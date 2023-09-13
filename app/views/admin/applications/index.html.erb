@@ -1,0 +1,28 @@
+<h1>Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>UID</th>
+      <th>Active</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @applications.each do |application| %>
+      <tr>
+        <td><%= application.name %></td>
+        <td><%= application.uid %></td>
+        <td><%= application.active ? 'Yes' : 'No' %></td>
+        <td>
+          <%= link_to "Show", admin_application_path(application) %>
+          <%= link_to "Edit", edit_admin_application_path(application) %>
+          <%= link_to "Delete", admin_application_path(application), method: :delete, data: { confirm: "Are you sure?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Application", new_admin_application_path %>

@@ -1,0 +1,8 @@
+<h1>Merchant Details</h1>
+
+<p><strong>Name:</strong> <%= @merchant.name %></p>
+<p><strong>Payout Rate:</strong> <%= @merchant.payout_rate %></p>
+<p><strong>Country:</strong> <%= @merchant.country %></p>
+<p><strong>Active:</strong> <%= @merchant.active ? 'Yes' : 'No' %></p>
+
+<%= link_to "Back", admin_merchants_path %>

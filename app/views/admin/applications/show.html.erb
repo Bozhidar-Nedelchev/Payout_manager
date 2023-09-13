@@ -1,0 +1,9 @@
+<h1>Application Details</h1>
+
+<p><strong>Name:</strong> <%= @application.name %></p>
+<p><strong>UID:</strong> <%= @application.uid %></p>
+<p><strong>Secret:</strong> <%= @application.secret %></p>
+<p><strong>Clientt:</strong> <%= @application.client %></p>
+<p><strong>Active:</strong> <%= @application.active ? 'Yes' : 'No' %></p>
+
+<%= link_to "Back", admin_applications_path %>

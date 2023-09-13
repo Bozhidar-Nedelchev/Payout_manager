@@ -1,0 +1,44 @@
+<%= form_with(model: @application, url: (@application.new_record? ? admin_applications_path : admin_application_path(@application)), local: true) do |form| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+        <% @application.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uid %>
+    <%= form.text_field :uid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secret %>
+    <%= form.text_field :secret %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :secret %>
+    <%= form.check_box :secret %>
+  </div>
+
+  <!-- Add fields for other attributes as needed -->
+
+  <div class="actions">
+    <%= form.submit 'Save' %>
+  </div>
+<% end %>

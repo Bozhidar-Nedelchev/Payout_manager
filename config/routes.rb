@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   namespace :admin do
   root 'home#index'
   resources :countries
+  resources :clients
+  resources :merchants
+  resources :brands
+  resources :products
+  resources :applications
   end
   resources :countries do 
     collection do
