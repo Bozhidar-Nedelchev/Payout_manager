@@ -1,0 +1,16 @@
+<h1>Country Details</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Name:</th>
+      <td><%= @country.name %></td>
+    </tr>
+    <tr>
+      <th>Currency:</th>
+      <td><%= @country.currency %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Back', admin_countries_path %>

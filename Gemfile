@@ -9,9 +9,19 @@ gem "rails", "~> 7.0.5"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'devise', '~> 4.8'
+
 gem 'pg'
 
 gem 'money-rails'
+
+# Gemfile
+gem 'bulma-rails', '~> 0.9.2'
+
+gem 'cancancan', '~> 3.1'
+
+gem 'kaminari', '~> 1.2' # For pagination
+gem 'csv', '~> 3.1'       # For CSV export
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
